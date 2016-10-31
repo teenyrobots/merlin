@@ -29,9 +29,3 @@ img {
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-
-.carousel-cell {
-  width: 50%; /* half-width */
-  height: 2500px;
-  margin-right: 10px;
-}
