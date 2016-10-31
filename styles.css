@@ -19,6 +19,7 @@ img {
 	display: block;
 	margin: auto;
 	width: 1450px;
+	position: relative;
 }
 
 #comicContainer div {
@@ -28,15 +29,16 @@ img {
 #prev {
 	position: absolute;
 	left: -25%;
-	opacity: 0.3;
-	filter: alpha(opacity=50); /* For IE8 and earlier */
+	opacity: 0.5;
+	/* ask lindsay about filters */
+	filter: alpha(opacity=20); /* For IE8 and earlier */
 }
 
 #next {
 	right: -25%;
 	position: absolute;
-	opacity: 0.3;
-	filter: alpha(opacity=50); /* For IE8 and earlier */
+	opacity: 0.5;
+	filter: alpha(opacity=20); /* For IE8 and earlier */
 }
 
 #active {
