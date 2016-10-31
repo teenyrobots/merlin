@@ -12,7 +12,8 @@ img {
 #comicContainer {
 	display: block;
 	margin: auto;
-	width: 1450px;
+	width: 100%;
+	max-width: 1400px;
 }
 
 #nav {
@@ -26,20 +27,40 @@ img {
 }
 
 #prev {
-	position: absolute;
-	left: -25%;
+/*	position: relative;
+	left: -25%; */
+	float: left;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+#prev img {
+	width: 100%;
+	max-width: 500px;
+}
+
 #next {
-	right: -25%;
-	position: absolute;
+/*	position: relative; */
+	float: right;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#next img {
+	width: 100%;
+	max-width: 500px;
 }
 
 #active {
 	position: absolute;
+	display: block;
+	margin: auto;
 	left: 25%;
+}
+
+#title img{
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width: 700px;
 }
