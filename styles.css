@@ -1,1 +1,37 @@
 /* Styles for Title Tk */
+
+body {
+	display: block;
+	margin: auto;
+}
+
+img {
+	padding: 25px;
+}
+
+#comicContainer {
+	display: block;
+	margin: auto;
+	width: 1600px;
+}
+
+#comicContainer img {
+	display: inline;
+}
+
+#comicPrev {
+	margin-left: -400px;
+	opacity: 0.3;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#comicNext {
+	opacity: 0.3;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.carousel-cell {
+  width: 50%; /* half-width */
+  height: 2500px;
+  margin-right: 10px;
+}

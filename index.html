@@ -3,18 +3,35 @@
 
 	<head>
 		<title>TITLE TK | joyce rice</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script type="text/javascript" src="script.js"></script>
 		<!--optional-->
 			<!--jQuery-->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<!--Flickity-->
+			<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css">
+			<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.js"></script>
+		<!--cascade that shit yo-->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
 	</head>
-
 <!--***-->
-
 	<body>
-		<h1>Title TK</h1>
-		<img src="images/rock.jpg">
+
+		<div class="main-carousel">
+			<div class="carousel-cell"><img src="images/3.jpg"></div>
+			<div class="carousel-cell"><img src="images/4.jpg"></div>
+			<div class="carousel-cell"><img src="images/5.jpg"></div>
+		</div>
+<!--
+		<div id="comicContainer">
+			<img src="images/3.jpg" id="comicPrev">
+			<img src="images/4.jpg" id="comicActive">
+			<img src="images/5.jpg" id="comicNext">
+		</div>
+		<div id="nav">
+			<img src="images/nav.jpg">
+		</div>
+-->
+		<script type="text/javascript" src="script.js"></script>
 	</body>
 
 </html>
