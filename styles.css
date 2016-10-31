@@ -6,26 +6,40 @@ body {
 }
 
 img {
-	padding: 25px;
+	padding: 0px;
 }
 
 #comicContainer {
 	display: block;
 	margin: auto;
-	width: 1600px;
+	width: 1450px;
 }
 
-#comicContainer img {
+#nav {
+	display: block;
+	margin: auto;
+	width: 1450px;
+}
+
+#comicContainer div {
 	display: inline;
 }
 
-#comicPrev {
-	margin-left: -400px;
+#prev {
+	position: absolute;
+	left: -25%;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-#comicNext {
+#next {
+	right: -25%;
+	position: absolute;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#active {
+	position: absolute;
+	left: 25%;
 }
