@@ -10,10 +10,35 @@ var comicPages = [
 	"images/7.jpg"
 ]
 
-function nextPage() {
+var i = 3;
 
+userStart="begin";
+
+function nextPage() {
+	if (i < 6) {
+		i++;
+		/* if (i != 3) {
+			var parent = document.getElementById("title");
+			var child = document.getElementById("titleImg");
+			parent.removeChild(child);
+		}*/
+		document.getElementById("comicActive").src=comicPages[i];
+		document.getElementById("comicPrev").src=comicPages[i-1];
+		document.getElementById("comicNext").src=comicPages[i+1];
+		scroll(0,0);
+	} else {
+		document.getElementById("comicActive").src="images/rock.jpg";
+	}
 }
 
 function prevPage() {
-	
+	if (i > 0) {
+		i--;
+		document.getElementById("comicActive").src=comicPages[i];
+		document.getElementById("comicPrev").src=comicPages[i-1];
+		document.getElementById("comicNext").src=comicPages[i+1];
+		scroll(0,0);
+	} else {
+		document.getElementById("comicActive").src="images/rock.jpg";
+	}
 }
