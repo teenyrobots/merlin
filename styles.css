@@ -1,35 +1,24 @@
 /* Styles for Title Tk */
 
-body {
+body * {
 	display: block;
 	margin: auto;
 }
 
-img {
-	padding: 0px;
+#title img{
+	width: 100%;
+	max-width: 700px;
 }
 
-#comicContainer {
-	display: block;
-	margin: auto;
+#bgContainer {
 	width: 100%;
 	max-width: 1400px;
-}
-
-#nav {
-	display: block;
-	margin: auto;
-	width: 1450px;
-}
-
-#comicContainer div {
-	display: inline;
+	position: relative;
 }
 
 #prev {
-/*	position: relative;
-	left: -25%; */
 	float: left;
+	width: 500px;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
@@ -40,7 +29,6 @@ img {
 }
 
 #next {
-/*	position: relative; */
 	float: right;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -53,14 +41,26 @@ img {
 
 #active {
 	position: absolute;
-	display: block;
-	margin: auto;
-	left: 25%;
+	width: 100%;
+	max-width: 1400px;
+	top: 0;
 }
 
-#title img{
-	display: block;
-	margin: auto;
-	width: 100%;
+#active img {
+	width: 85%;
 	max-width: 700px;
+	right: 25%;
+	left: 25%;
+	top: 0;
 }
+
+#nav {
+	position: relative;
+	margin: 5%;
+}
+
+#nav img {
+	width: 100%;
+	max-width: 500px;
+}
+
