@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>TITLE TK | joyce rice</title>
+		<title>Merlyn | joyce rice</title>
 		<!--optional-->
 			<!--jQuery-->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -13,7 +13,19 @@
 <!--***-->
 	<body>
 		<div id="title">
-			<img src="images/title.jpg">
+			<img src="images/title.jpg"
+			onclick="window.location.reload()"
+			style="margin-top: 1em">
+		</div>
+		<br>
+		<div id="navProgress">
+			<div class="navCircle" id="nav1"></div>
+			<div class="navCircle" id="nav2"></div>
+			<div class="navCircle" id="nav3"></div>
+			<div class="navCircle" id="nav4"></div>
+			<div class="navCircle" id="nav5"></div>
+			<div class="navCircle" id="nav6"></div>
+			<div class="navCircle" id="nav7"></div>
 		</div>
 		<div id="bgContainer">
 			<div id="prev">
@@ -27,14 +39,18 @@
 			<div id="active">
 				<img src="images/4.jpg" id="comicActive">
 				<div id="nav">
-					<img src="images/nav.jpg">
-					<button onclick="prevPage()">< this a way</button>
-					<button onclick="nextPage()">that a way ></button>
+					<img src="images/nav.jpg" id="xpTime">
+					<div class="navChild">
+						<img src="images/leftBracket.jpg" onclick="prevPage()" style="width: 100px" id="rb">
+						<img src="images/rightBracket.jpg" onclick="nextPage()" style="width: 100px" id="lb">
+					</div>
+					<div class="navChild">
+						<img src="images/leftBracket2.jpg" onclick="firstPage()" style="width: 100px" id="rb2">
+						<img src="images/rightBracket2.jpg" onclick="lastPage()" style="width: 100px" id="lb2">
+					</div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="script.js"></script>
-
 	</body>
-
 </html>
