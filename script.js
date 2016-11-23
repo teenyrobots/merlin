@@ -12,6 +12,9 @@ $(document).ready(function(){
 	$("#nav4").css("background-color","grey");
 });
 
+document.getElementById("rb").style.display = "none";
+document.getElementById("lb").style.display = "none";
+
 var comicPages = [
 	"images/1.jpg",
 	"images/2.jpg",
@@ -35,6 +38,7 @@ function firstPage() {
 	scroll(0,0);
 	navProgSwitch();
 	removeInitialNav();
+	document.getElementById("lb").style.display = "block";
 }
 
 function lastPage() {
@@ -45,6 +49,7 @@ function lastPage() {
 	scroll(0,0);
 	navProgSwitch();
 	removeInitialNav();
+	document.getElementById("rb").style.display = "block";
 }
 
 function nextPage() {
@@ -56,7 +61,7 @@ function nextPage() {
 		scroll(0,0);
 		if (i==6) {
 			itsOver();
-			document.getElementById("comicNext").src="images/blank.png";
+			document.getElementById("comicNext").src="images/blank.png"
 		}
 	} else {
 		console.log("nextPage ran else")
@@ -73,7 +78,9 @@ function prevPage() {
 		scroll(0,0);
 		if (i == 0) {
 			itsOver();
-			document.getElementById("comicPrev").src="images/blank.png";
+			// no matter how i try to hide this element, i get a "net::ERR_FILE_NOT_FOUND" error and i can't figure out why:
+			//document.getElementById("comicPrev").style.visibility = "hidden";
+			document.getElementById("comicPrev").src="images/blank.png"
 		}
 		console.log(i);
 	} else {
@@ -90,8 +97,7 @@ function removeInitialNav() {
 	rb2.parentNode.removeChild(rb2);
 	var lb2 = document.getElementById("lb2");
 	lb2.parentNode.removeChild(lb2);
-	var xpTime = document.getElementById("xpTime");
-	xpTime.parentNode.removeChild(xpTime);
+	document.getElementById("xpTime").style.display = "none";
 }
 
 function itsOver() {
@@ -99,8 +105,14 @@ function itsOver() {
 	rb.parentNode.removeChild(rb);
 	var lb = document.getElementById("lb");
 	lb.parentNode.removeChild(lb);
-	// access the div w id "active" and a new image element
-	// give that new img element the src "images/end.jpg"
+	document.getElementById("xpTime").style.display="block";
+	document.getElementById("xpTime").src="images/end.jpg";
+	document.getElementById("xpTime").onclick = reloadMerlyn;
+}
+
+function reloadMerlyn() {
+	window.location.reload();
+	scroll(0,0);
 }
 
 function navProgSwitch() {
