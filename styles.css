@@ -10,12 +10,7 @@ body * {
 	max-width: 700px;
 }
 
-#bgContainer {
-	width: 100%;
-	max-width: 1400px;
-	position: relative;
-}
-
+/* The previous page (greyed out)*/
 #prev {
 	float: left;
 	width: 500px;
@@ -23,24 +18,24 @@ body * {
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 	margin-top: 5%;
 }
-
 #prev img {
 	width: 100%;
 	max-width: 500px;
 }
 
+/* The next page (greyed out) */
 #next {
 	float: right;
 	opacity: 0.3;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 	margin-top: 5%;
 }
-
 #next img {
 	width: 100%;
 	max-width: 500px;
 }
 
+/* The active page (full opacity) */
 #active {
 	position: absolute;
 	width: 100%;
@@ -48,7 +43,6 @@ body * {
 	top: 0;
 	margin: 0 auto;
 }
-
 #active img {
 	width: 85%;
 	max-width: 700px;
@@ -58,6 +52,17 @@ body * {
 	/*box-shadow: 0px 0px 50px 10px #888888; */
 }
 
+#bgContainer {
+	width: 100%;
+	max-width: 1400px;
+	position: relative;
+}
+
+
+
+
+
+
 #nav {
 	position: relative;
 	margin: 5% auto;
@@ -65,40 +70,34 @@ body * {
 }
 
 #nav img {
-	width: 100%;
+	width: auto;
 	max-width: 500px;
 	box-shadow: none;
-	display: block;
 	margin: auto;
+	margin-bottom: 2em;
 }
 
 .navChild {
 	display: block;
 	margin: auto;
+	width: 265px;
 }
 
 .navChild img {
 	display: inline-block;
-	margin: 0 auto;
-}
-
-.navProgress {
-	width: 80%;
-	max-width: 700px;
-	border: 5px solid black;
-	display: block;
-	margin: 0 auto;
+	padding: 15px;
 }
 
 #navProgress {
 	position: relative;
 	display: block;
 	margin: auto;
+	width: 15em;
 }
 
 .navCircle {
-	width: 12px;
-	height: 12px;
+	width: .75em;
+	height: .75em;
 	border-radius: 100%;
 	border: 1px solid grey;
 	background-color: white;

@@ -1,8 +1,8 @@
 // javascript for merlyn
 
 /* TODOS
-[ ] can i just HIDE an element?
-
+[x] can i just HIDE an element?
+[ ] loses connection to script when window is reloaded?
 */
 
 //INITIALIZE
@@ -14,6 +14,8 @@ $(document).ready(function(){
 
 document.getElementById("rb").style.display = "none";
 document.getElementById("lb").style.display = "none";
+
+var plsScrollTo = document.getElementById('bgContainer');
 
 var comicPages = [
 	"images/1.jpg",
@@ -35,7 +37,8 @@ function firstPage() {
 	document.getElementById("comicPrev").src="images/blank.png";
 	document.getElementById("comicActive").src=comicPages[i];
 	document.getElementById("comicNext").src=comicPages[i+1];
-	scroll(0,0);
+	//scroll(0,0);
+	plsScrollTo.scrollIntoView();
 	navProgSwitch();
 	removeInitialNav();
 	document.getElementById("lb").style.display = "block";
@@ -46,7 +49,8 @@ function lastPage() {
 	document.getElementById("comicPrev").src=comicPages[i-1];
 	document.getElementById("comicActive").src=comicPages[i];
 	document.getElementById("comicNext").src="images/blank.png";
-	scroll(0,0);
+	//scroll(0,0);
+	plsScrollTo.scrollIntoView();
 	navProgSwitch();
 	removeInitialNav();
 	document.getElementById("rb").style.display = "block";
@@ -61,7 +65,7 @@ function nextPage() {
 		scroll(0,0);
 		if (i==6) {
 			itsOver();
-			document.getElementById("comicNext").src="images/blank.png"
+			document.getElementById("comicNext").display="none";
 		}
 	} else {
 		console.log("nextPage ran else")
@@ -78,9 +82,7 @@ function prevPage() {
 		scroll(0,0);
 		if (i == 0) {
 			itsOver();
-			// no matter how i try to hide this element, i get a "net::ERR_FILE_NOT_FOUND" error and i can't figure out why:
-			//document.getElementById("comicPrev").style.visibility = "hidden";
-			document.getElementById("comicPrev").src="images/blank.png"
+			document.getElementById("comicPrev").display="none";
 		}
 		console.log(i);
 	} else {
@@ -107,6 +109,7 @@ function itsOver() {
 	lb.parentNode.removeChild(lb);
 	document.getElementById("xpTime").style.display="block";
 	document.getElementById("xpTime").src="images/end.jpg";
+	document.getElementById("xpTime").style="margin-bottom: 5em";
 	document.getElementById("xpTime").onclick = reloadMerlyn;
 }
 
@@ -157,3 +160,9 @@ function navProgSwitch() {
 			$(".navCircle").css("background-color","white");
 		}
 }
+
+//NOTES
+
+//To scroll to a certain element:
+//var plsScrollTo = document.getElementById('bgContainer');
+//plsScrollTo.scrollIntoView();
