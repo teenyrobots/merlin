@@ -62,10 +62,10 @@ function nextPage() {
 		document.getElementById("comicActive").src=comicPages[i];
 		document.getElementById("comicPrev").src=comicPages[i-1];
 		document.getElementById("comicNext").src=comicPages[i+1];
-		scroll(0,0);
+		plsScrollTo.scrollIntoView();
 		if (i==6) {
 			itsOver();
-			document.getElementById("comicNext").display="none";
+			document.getElementById("comicNext").src="images/blank.png";
 		}
 	} else {
 		console.log("nextPage ran else")
@@ -79,10 +79,10 @@ function prevPage() {
 		document.getElementById("comicActive").src=comicPages[i];
 		document.getElementById("comicPrev").src=comicPages[i-1];
 		document.getElementById("comicNext").src=comicPages[i+1];
-		scroll(0,0);
+		plsScrollTo.scrollIntoView();
 		if (i == 0) {
 			itsOver();
-			document.getElementById("comicPrev").display="none";
+			document.getElementById("comicPrev").src="images/blank.png";
 		}
 		console.log(i);
 	} else {

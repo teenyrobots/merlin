@@ -14,8 +14,8 @@ body * {
 #prev {
 	float: left;
 	width: 500px;
-	opacity: 0.3;
-	filter: alpha(opacity=50); /* For IE8 and earlier */
+	opacity: 0.25;
+	filter: alpha(opacity=25); /* For IE8 and earlier */
 	margin-top: 5%;
 }
 #prev img {
@@ -26,8 +26,8 @@ body * {
 /* The next page (greyed out) */
 #next {
 	float: right;
-	opacity: 0.3;
-	filter: alpha(opacity=50); /* For IE8 and earlier */
+	opacity: 0.25;
+	filter: alpha(opacity=25); /* For IE8 and earlier */
 	margin-top: 5%;
 }
 #next img {
